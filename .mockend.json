@@ -1,0 +1,7 @@
+.azimuth <- function(hm, phi, dec) {
+  return(atan2(sin(hm), cos(hm) * sin(phi) - tan(dec) * cos(phi)))
+}
+
+.altitude <- function(hm, phi, dec) {
+  return(asin(sin(phi) * sin(dec) + cos(phi) * cos(dec) * cos(hm)))
+}
